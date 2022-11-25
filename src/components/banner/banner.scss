@@ -1,8 +1,15 @@
 .banner {
     width: 100%;
     position: relative;
+    color: var(--white);
+    overflow: hidden;
     img {
         max-width: 30rem;
+    }
+    .title1 {
+        &::before {
+            content: none;
+        }
     }
 
     &__wrapper{
@@ -11,5 +18,29 @@
         padding: 5rem 0;
         position: relative;
         justify-content: space-around;
+        align-items: center;
+
+        button {
+            margin-left: auto;
+        }
+
+        @media (max-width: 767px){
+            flex-direction: column;
+            text-align: center;
+            button {
+                margin-top: 1rem;
+            }
+        }
+    }
+    img {
+        max-width: 38rem;
+        position: absolute;
+        right: 0;
+        top: 2rem;
+        z-index: 99;
+        @media (max-width: 767px) {
+            max-width: 15rem;
+            top: 0;
+        }
     }
 }
